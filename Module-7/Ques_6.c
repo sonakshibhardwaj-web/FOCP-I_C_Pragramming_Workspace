@@ -1,19 +1,24 @@
 #include <stdio.h>
+
 int main(void) {
+    int i = 0;
     int n;
-    if (scanf("%d", &n) != 1) {
-        return 0;
-    }
+    printf("Enter Number:\n");
+    scanf("%d", &n);
+
     int num = 1;
-    for (int i = 1; i <= n; i++) {
-        for (int j = 1; j <= i; j++) {
-            if (j > 1) {
+    while (i < n) {
+        int j = 0;
+        while (j <= i) {
+            if (j > 0) {
                 printf(" ");
             }
             printf("%d", num);
             num++;
+            j++;
         }
         printf("\n");
+        i++;
     }
     return 0;
 }
